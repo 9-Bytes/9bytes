@@ -1,0 +1,29 @@
+{
+	"name": "landing-page",
+	"version": "1.0.0",
+	"description": "Website for Bassi and Pascal",
+	"main": "index.mjs",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build-css": "postcss css/main.css -o dist/main.min.css",
+		"watch-css": "postcss css/*.css -d dist --watch",
+		"dev": "concurrently \"live-server\" \"npm run watch-css\""
+	},
+	"keywords": [
+		"html",
+		"css",
+		"javascript"
+	],
+	"author": "Gh05d",
+	"license": "UNLICENSED",
+	"devDependencies": {
+		"autoprefixer": "^10.4.14",
+		"concurrently": "^7.6.0",
+		"cssnano": "^5.1.15",
+		"live-server": "^1.2.2",
+		"postcss": "^8.4.21",
+		"postcss-cli": "^10.1.0",
+		"postcss-nesting": "^11.2.1",
+		"prettier": "^2.8.4"
+	}
+}

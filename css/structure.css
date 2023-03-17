@@ -1,0 +1,50 @@
+html,
+body {
+	--primary-hue: 206;
+	--primary-saturation: 100%;
+	--primary-lightness: 39%;
+	--primary: hsl(
+		var(--primary-hue),
+		var(--primary-saturation),
+		var(--primary-lightness)
+	);
+	--secondary-hue: 85;
+	--secondary-saturation: 54%;
+	--secondary-lightness: 51%;
+	--secondary: hsl(
+		var(--secondary-hue),
+		var(--secondary-saturation),
+		var(--secondary-lightness)
+	);
+	--tertiary-hue: 45;
+	--tertiary-saturation: 87%;
+	--tertiary-lightness: 57%;
+	--tertiary: hsl(
+		var(--tertiary-hue),
+		var(--tertiary-saturation),
+		var(--tertiary-lightness)
+	);
+	--neutral-hue: 0;
+	--neutral-saturation: 0%;
+	--neutral-lightness: 92%;
+	--neutral: hsl(
+		var(--neutral-hue),
+		var(--neutral-saturation),
+		var(--neutral-lightness)
+	);
+	--neutral-variant-hue: 0;
+	--neutral-variant-saturation: 0%;
+	--neutral-variant-lightness: 96%;
+	--neutral-variant: hsl(
+		var(--neutral-variant-hue),
+		var(--neutral-variant-saturation),
+		var(--neutral-variant-lightness)
+	);
+	--page-padding: 2rem;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	color: #333;
+	background: #fff;
+	font-family: "Open Sans", sans-serif;
+}

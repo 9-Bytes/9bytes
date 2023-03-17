@@ -1,0 +1,138 @@
+@import url("structure.css");
+@import url("components.css");
+
+.gradient-background {
+	--primary: hsl(
+		var(--primary-hue),
+		var(--primary-saturation),
+		var(--primary-lightness)
+	);
+	--gradient-start: hsl(
+		var(--primary-hue),
+		var(--primary-saturation),
+		calc(var(--primary-lightness) - 15%)
+	);
+	background: linear-gradient(
+		90deg,
+		var(--gradient-start),
+		var(--primary),
+		var(--gradient-start)
+	);
+	color: white;
+}
+
+section {
+	--small-padding: calc(var(--page-padding) / 2);
+	padding: var(--small-padding);
+	background: var(--neutral);
+
+	&:first-of-type {
+		color: white;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+
+		& .container {
+			padding: var(--small-padding);
+			flex: 2;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			& h1 {
+				font-size: 2.7em;
+			}
+
+			& p {
+				font-size: 1.4em;
+			}
+
+			& h2 {
+				font-size: 2em;
+				margin-bottom: 1rem;
+			}
+		}
+	}
+
+	&:nth-of-type(odd) {
+		background-color: hsl(
+			var(--tertiary-hue),
+			var(--tertiary-saturation),
+			calc(var(--tertiary-lightness) + 25%)
+		);
+	}
+}
+
+#call-to-action-footer {
+	text-align: center;
+
+	& h2 {
+		font-size: 2.6em;
+	}
+}
+
+footer {
+	padding: var(--page-padding);
+	background: var(--neutral-variant);
+}
+
+@media screen and (min-width: 30rem) {
+	section {
+		padding: var(--page-padding);
+
+		&:first-of-type .container {
+			padding: var(--page-padding);
+
+			& h1 {
+				font-size: 4em;
+			}
+
+			& p {
+				font-size: 1.6em;
+			}
+
+			& h2 {
+				font-size: 2.4em;
+			}
+		}
+	}
+
+	#call-to-action-footer {
+		padding: calc(var(--page-padding) * 2);
+
+		& h2 {
+			font-size: 3em;
+		}
+	}
+}
+
+@media screen and (min-width: 55rem) {
+	section {
+		&:first-of-type {
+			font-size: 0.8rem;
+			flex-direction: row;
+			height: 100vh;
+
+			&::after {
+				/* Foto von <a href="https://unsplash.com/@cgower?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Christopher Gower</a> auf <a href="https://unsplash.com/de/s/fotos/digital?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+         */
+				content: "";
+				background-image: url(/images/background.jpg);
+				background-size: cover;
+				background-clip: content-box;
+				flex: 1;
+				margin: auto 2rem;
+				height: 50%;
+			}
+
+			.container {
+				display: initial;
+			}
+		}
+	}
+
+	#call-to-action-footer {
+		padding: calc(var(--page-padding) * 3);
+	}
+}

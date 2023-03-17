@@ -1,0 +1,45 @@
+h1 {
+	font-size: 4rem;
+	margin-bottom: 2rem;
+}
+
+h2 {
+	margin-bottom: 1rem;
+}
+
+p {
+	line-height: 1.6;
+}
+
+button {
+	text-transform: uppercase;
+	background-color: var(--secondary);
+	color: #fff;
+	padding: 0.8rem 1.2rem;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out;
+
+	&:hover {
+		--secondary-saturation: 80%;
+		--secondary: hsl(
+			var(--secondary-hue),
+			var(--secondary-saturation),
+			var(--secondary-lightness)
+		);
+		background-color: var(--secondary);
+	}
+}
+
+.cta {
+	font-size: 1rem;
+	margin-top: 2rem;
+}
+
+@media screen and (min-width: 30rem) {
+	.cta {
+		font-size: 1.4rem;
+		margin-top: 2rem;
+	}
+}
