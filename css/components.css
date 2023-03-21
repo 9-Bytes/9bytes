@@ -11,6 +11,41 @@ p {
 	line-height: 1.6;
 }
 
+picture {
+	position: relative;
+
+	& span {
+		color: white;
+		text-shadow: 1px 1px 0 var(--primary);
+		position: absolute;
+		bottom: 1rem;
+		right: 1rem;
+		font-size: 0.6em;
+	}
+}
+
+img {
+	max-width: 100%;
+	height: 100%;
+}
+
+a {
+	color: var(--primary);
+	text-decoration: none;
+	border-bottom: 0;
+	transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+
+	&:hover {
+		border-bottom: 2px solid var(--primary);
+		--primary: hsl(
+			var(--primary-hue),
+			var(--primary-saturation),
+			calc(var(--primary-lightness) + 25%)
+		);
+		color: var(--primary);
+	}
+}
+
 button {
 	text-transform: uppercase;
 	background-color: var(--secondary);

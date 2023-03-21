@@ -51,6 +51,8 @@ section {
 			& h2 {
 				font-size: 2em;
 				margin-bottom: 1rem;
+				text-align: left;
+				text-transform: uppercase;
 			}
 		}
 	}
@@ -69,12 +71,9 @@ section {
 
 	& h2 {
 		font-size: 2.6em;
+		text-align: center;
+		text-transform: uppercase;
 	}
-}
-
-footer {
-	padding: var(--page-padding);
-	background: var(--neutral-variant);
 }
 
 @media screen and (min-width: 30rem) {
@@ -103,6 +102,33 @@ footer {
 
 		& h2 {
 			font-size: 3em;
+		}
+	}
+}
+
+@media screen and (min-width: 40rem) {
+	section {
+		& > div {
+			display: flex;
+			gap: 1rem;
+
+			& > * {
+				flex: 1;
+			}
+		}
+
+		&:first-of-type h2 {
+			margin-top: 7rem;
+		}
+
+		&:nth-of-type(odd) {
+			& h2 {
+				text-align: right;
+			}
+
+			& > div {
+				flex-direction: row-reverse;
+			}
 		}
 	}
 }
