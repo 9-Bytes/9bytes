@@ -67,6 +67,21 @@ button {
 	}
 }
 
+nav {
+	padding: 0 var(--page-padding);
+
+	& a:hover {
+		border-bottom: none;
+	}
+}
+
+.list {
+	padding: 0;
+	display: flex;
+	gap: 1rem;
+	list-style-type: none;
+}
+
 .cta {
 	--container-offset: 25px;
 	--glow-line-color: white;

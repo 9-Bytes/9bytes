@@ -17,6 +17,8 @@
 			as="style"
 		/>
 		<link rel="stylesheet" href="dist/main.css" media="screen" />
+
+		<script type="module" src="main.mjs"></script>
 	</head>
 
 	<body>
@@ -104,18 +106,6 @@
 							"
 							alt="Person erstellt Designs vor einem Bildschirm auf Papier"
 						/>
-						<span
-							>Photo by
-							<a
-								href="https://unsplash.com/@firmbee?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-								>Firmbee.com</a
-							>
-							on
-							<a
-								href="https://unsplash.com/backgrounds/apps/website?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-								>Unsplash</a
-							>
-						</span>
 					</picture>
 				</div>
 			</section>
@@ -167,18 +157,6 @@
 							"
 							alt="Person erstellt Designs vor einem Bildschirm auf Papier"
 						/>
-						<span>
-							Photo by
-							<a
-								href="https://unsplash.com/@olafval?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-								>Olaf Val</a
-							>
-							on
-							<a
-								href="https://unsplash.com/photos/UTk9cXzYWAg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-								>Unsplash</a
-							>
-						</span>
 					</picture>
 				</div>
 			</section>
@@ -217,18 +195,6 @@
 							"
 							alt="Kunde beim Friseur bezahlt mit Handy über Bluetooth"
 						/>
-						<span>
-							Photo by
-							<a
-								href="https://unsplash.com/@blakewisz?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-								>Blake Wisz</a
-							>
-							on
-							<a
-								href="https://unsplash.com/photos/Xn5FbEM9564?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-								>Unsplash</a
-							>
-						</span>
 					</picture>
 				</div>
 			</section>
@@ -267,18 +233,6 @@
 							"
 							alt="Person schaut sich Analytics Statistiken auf einem Laptop an"
 						/>
-						<span>
-							Photo by
-							<a
-								href="https://unsplash.com/@mjessier?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-								>Myriam Jessier</a
-							>
-							on
-							<a
-								href="https://unsplash.com/photos/eveI7MOcSmw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-								>Unsplash</a
-							>
-						</span>
 					</picture>
 				</div>
 			</section>
@@ -345,18 +299,6 @@
 							"
 							alt="Personen sitzen an einem Tisch mit vielen Laptops und Handys"
 						/>
-						<span>
-							Photo by
-							<a
-								href="https://unsplash.com/@mjessier?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-								>Myriam Jessier</a
-							>
-							on
-							<a
-								href="https://unsplash.com/photos/eveI7MOcSmw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-								>Unsplash</a
-							>
-						</span>
 					</picture>
 				</div>
 			</section>
@@ -503,7 +445,15 @@
 		</main>
 
 		<footer>
-			<p>© 2021 9Bytes</p>
+			<ul class="list">
+				<li>© <span id="current-year">2023</span> 9Bytes</li>
+				<li>
+					<a href="impressum.html">Impressum</a>
+				</li>
+				<li>
+					<a href="datenschutz.html">Datenschutz</a>
+				</li>
+			</ul>
 		</footer>
 	</body>
 </html>

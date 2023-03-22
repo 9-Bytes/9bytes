@@ -2,29 +2,40 @@
 @import url("components.css");
 
 .gradient-background {
-	--primary: hsl(
-		var(--primary-hue),
-		var(--primary-saturation),
-		var(--primary-lightness)
-	);
 	--gradient-start: hsl(
-		var(--primary-hue),
-		var(--primary-saturation),
-		calc(var(--primary-lightness) - 15%)
+		var(--primary-hue) var(--primary-saturation)
+			calc(var(--primary-lightness) - 15%)
+	);
+	--gradient-middle: hsl(
+		var(--primary-hue) var(--primary-saturation)
+			calc(var(--primary-lightness) - 5%)
 	);
 	background: linear-gradient(
 		90deg,
 		var(--gradient-start),
+		var(--gradient-middle),
 		var(--primary),
 		var(--gradient-start)
 	);
+	background-size: 200%;
+	animation: waves 20s infinite alternate;
 	color: white;
+}
+
+@keyframes waves {
+	from {
+		background-position: right;
+	}
+	to {
+		background-position: left;
+	}
 }
 
 section {
 	--small-padding: calc(var(--page-padding) / 2);
 	padding: var(--small-padding);
 	background: var(--neutral);
+	position: relative;
 
 	&:first-of-type {
 		color: white;
@@ -57,12 +68,23 @@ section {
 		}
 	}
 
-	&:nth-of-type(odd) {
+	&:nth-of-type(odd):not(:first-of-type) {
 		background-color: hsl(
 			var(--tertiary-hue),
 			var(--tertiary-saturation),
 			calc(var(--tertiary-lightness) + 25%)
 		);
+
+		/* &:before {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: -20px;
+			height: 3rem;
+			background-color: var(--background-color);
+			transform: skewY(-2deg);
+		} */
 	}
 }
 
@@ -79,6 +101,10 @@ section {
 @media screen and (min-width: 30rem) {
 	section {
 		padding: var(--page-padding);
+
+		&:not(:first-of-type) {
+			padding: calc(var(--page-padding) * 3) var(--page-padding);
+		}
 
 		&:first-of-type .container {
 			padding: var(--page-padding);
@@ -106,7 +132,7 @@ section {
 	}
 }
 
-@media screen and (min-width: 40rem) {
+@media screen and (min-width: 45rem) {
 	section {
 		& > div {
 			display: flex;
