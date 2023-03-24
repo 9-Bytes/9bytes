@@ -44,7 +44,7 @@
 							Kontaktieren Sie uns noch heute für eine kostenlose Beratung und
 							ein unverbindliches Angebot.
 						</p>
-						<button class="cta">
+						<button class="cta" onclick="window.location.href='#cta'">
 							Jetzt Kontakt aufnehmen
 							<svg>
 								<rect
@@ -303,145 +303,58 @@
 				</div>
 			</section>
 
-			<!-- <section>
-				<h2>Zusammenfassung der Leistungen von 9Bytes</h2>
-				<p>
-					Unsere Web-Agentur bietet eine breite Palette an Leistungen, um Ihnen
-					dabei zu helfen, Ihre Online-Präsenz zu optimieren und zu maximieren.
-					Hier sind einige unserer Kernkompetenzen, die wir Ihnen gerne
-					anbieten:
-				</p>
-
-				<ul>
-					<li>
-						Webentwicklung:
-						<ul>
-							<li>Drupal</li>
-							<li>Wordpress</li>
-							<li>Headless CMS</li>
-							<li>Ghost</li>
-						</ul>
-					</li>
-					<li>
-						App-Entwicklung:
-						<ul>
-							<li>Erfahrung mit React Native</li>
-							<li>Anfängerkenntnisse in Android und iOS</li>
-						</ul>
-					</li>
-					<li>
-						eCommerce:
-						<ul>
-							<li>Woocommerce</li>
-							<li>Shopify</li>
-							<li>PSPs (Adyen)</li>
-						</ul>
-					</li>
-					<li>Barrierefreiheit (Accessibility)</li>
-					<li>
-						Online-Marketing:
-						<ul>
-							<li>SEO</li>
-							<li>SEA (Google, Facebook, Instagram, Tiktok)</li>
-							<li>
-								Analytics (Google Analytics, Looker, Tag Manager, Optimize,
-								Adjust)
-							</li>
-							<li>Facebook Business Manager</li>
-							<li>Adjust</li>
-						</ul>
-					</li>
-					<li>
-						Programmiersprachen:
-						<ul>
-							<li>Erfahrung mit React, Svelte, NextJS, Nodejs</li>
-							<li>Anfängerkenntnisse in Python, Django, Solidity</li>
-						</ul>
-					</li>
-					<li>
-						Optimierung von Online-Marktplätzen:
-						<ul>
-							<li>Amazon Listing Quality</li>
-							<li>Performance</li>
-							<li>PPC</li>
-						</ul>
-					</li>
-					<li>
-						Individuelle Entwicklung:
-						<ul>
-							<li>Integration von ChatGPT</li>
-						</ul>
-					</li>
-					<li>
-						Infrastructure as a Service (IaaS):
-						<ul>
-							<li>Google Cloud Platform</li>
-							<li>Microsoft Azure</li>
-							<li>Amazon Web Service</li>
-						</ul>
-					</li>
-					<li>
-						User Experience (UX):
-						<ul>
-							<li>Material Design Guidelines</li>
-						</ul>
-					</li>
-					<li>
-						Zusammenarbeitstools:
-						<ul>
-							<li>Confluence</li>
-							<li>Jira Setup/Migration</li>
-						</ul>
-					</li>
-					<li>
-						IT-Beratung:
-						<ul>
-							<li>Conversion Rate Optimization (A/B Testingtools)</li>
-							<li>IT-Sicherheit und Governance</li>
-						</ul>
-					</li>
-					<li>
-						Design:
-						<ul>
-							<li>Erforderliche externe Unterstützung</li>
-							<li>
-								Mittleres Niveau in Adobe Palette (Photoshop, Illustrator)
-							</li>
-						</ul>
-					</li>
-					<li>
-						Projektmanagement:
-						<ul>
-							<li>Agile</li>
-							<li>Hybrid</li>
-						</ul>
-					</li>
-					<li>
-						Augmented-Reality-App:
-						<ul>
-							<li>React Native</li>
-							<li>Viro</li>
-						</ul>
-					</li>
-					<li>
-						Entwicklung von Online-Marktplätzen:
-						<ul>
-							<li>Z.B. Plugin-Entwicklung für JIRA</li>
-						</ul>
-					</li>
-				</ul>
-			</section> -->
-
 			<section id="call-to-action-footer" class="gradient-background">
 				<h2>Bereit, Ihre digitale Zukunft zu gestalten?</h2>
 				<p>
 					Unsere erfahrenen Experten helfen Ihnen dabei, die besten digitalen
 					Lösungen für Ihr Unternehmen zu finden und umzusetzen.
 				</p>
-				<button class="cta">
+
+				<button class="cta" onclick="window.location.href='#cta'">
 					Jetzt kostenloses Beratungsgespräch vereinbaren
 				</button>
 			</section>
+
+			<form
+				id="cta"
+				action="https://formspree.io/f/mnqyblap"
+				method="post"
+				class="modal"
+			>
+				<a href="#" class="modalClose" hidden aria-hidden="true"></a>
+				<div>
+					<section>
+						<a href="#" class="modalClose" hidden aria-hidden="true"></a>
+						<h2>Kostenloses Beratungsgespräch vereinbaren</h2>
+						<p>
+							Erhalten Sie eine kostenlose Beratung von unseren Experten und
+							lassen Sie uns gemeinsam herausfinden, wie wir Ihnen helfen
+							können.
+						</p>
+						<div>
+							<fieldset>
+								<label class="honey-field">
+									Email
+									<input type="text" name="honeypot" />
+								</label>
+								<label>
+									Name (optional)<br />
+									<input name="name" /><br /> </label
+								><label>
+									Email<br />
+									<input type="email" name="userName" required /><br />
+								</label>
+								<label>
+									Telefon (optional)<br />
+									<input type="tel" name="phone" /><br />
+								</label>
+							</fieldset>
+
+							<button>Abschicken</button>
+						</div>
+					</section>
+				</div>
+			</form>
 		</main>
 
 		<footer>

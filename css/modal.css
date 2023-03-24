@@ -1,0 +1,106 @@
+.modal .modalClose {
+	display: inline; /* undo hidden */
+	text-decoration: none;
+}
+
+.modal,
+.modal > .modalClose {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+
+.modal {
+	left: -100vw;
+	opacity: 0;
+	padding: 1em;
+	transition: opacity 0.3s, left 0s 0.3s;
+	background: radial-gradient(
+		hsla(220, 100%, 100%, 0.8) 20%,
+		hsla(220, 100%, 85%, 0.95) 100%
+	);
+
+	&:target {
+		left: 0;
+		opacity: 1;
+		transition: opacity 0.3s, left 0s;
+
+		& > div > section,
+		& > div > nav {
+			transform: scale(1);
+		}
+	}
+
+	& > div {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 100%;
+
+		& > section {
+			position: relative;
+			overflow: hidden;
+			padding: 2rem;
+			max-width: 38rem;
+			background: white;
+			border: 1px solid #0484;
+			border-radius: 0.5em;
+			box-shadow: 0 0.25em 1em #0006;
+			transform: scale(0);
+			transition: transform 0.3s;
+			font-size: 0.8rem;
+
+			& p {
+				margin-bottom: 0;
+			}
+
+			& h2 {
+				font-size: 1.5em;
+				text-align: center;
+			}
+
+			& button {
+				width: 100%;
+			}
+		}
+	}
+}
+
+section .modalClose,
+nav .modalClose {
+	position: absolute;
+	top: 0.25em;
+	right: 0.5em;
+	font-size: 1.75em;
+	color: #c00;
+	transition: transform 0.3s;
+}
+
+section .modalClose:after,
+nav .modalClose:after {
+	content: "x";
+
+	&:hover {
+		border-bottom: none;
+	}
+}
+
+section .modalClose:focus,
+section .modalClose:hover,
+nav .modalClose:focus,
+nav .modalClose:hover {
+	transform: scale(1.2);
+}
+
+@media screen and (min-width: 25rem) {
+	.modal {
+		padding: 3rem;
+
+		& > div > section {
+			font-size: 1rem;
+		}
+	}
+}

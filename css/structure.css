@@ -31,14 +31,22 @@ body {
 		var(--neutral-variant-hue) var(--neutral-variant-saturation)
 			var(--neutral-variant-lightness)
 	);
+	--error-color: #ff0000;
+	--disabled: #aaa;
 	--page-padding: 2rem;
 	--max-width: 97rem;
+	--input-background-color: #ccc;
 	min-height: 100%;
 	margin: 0;
 	padding: 0;
 	color: #333;
 	background-color: var(--neutral-variant);
 	font-family: "Open Sans", sans-serif;
+	overflow-x: hidden;
+
+	& * {
+		box-sizing: border-box;
+	}
 }
 
 main {

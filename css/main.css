@@ -1,5 +1,6 @@
 @import url("structure.css");
 @import url("components.css");
+@import url("modal.css");
 
 .gradient-background {
 	--gradient-start: hsl(
@@ -31,51 +32,53 @@
 	}
 }
 
-section {
-	--small-padding: calc(var(--page-padding) / 2);
-	padding: var(--small-padding);
-	background: var(--neutral);
-	position: relative;
+main {
+	& > section {
+		--small-padding: calc(var(--page-padding) / 2);
+		padding: var(--small-padding);
+		background: var(--neutral);
+		position: relative;
+		font-size: 0.6rem;
 
-	&:first-of-type {
-		color: white;
-		padding: 0;
-		display: flex;
-		flex-direction: column;
-		overflow: hidden;
-
-		& .container {
-			padding: var(--small-padding);
-			flex: 2;
+		&:first-of-type {
+			color: white;
+			padding: 0;
 			display: flex;
 			flex-direction: column;
-			justify-content: space-between;
+			overflow: hidden;
 
-			& h1 {
-				font-size: 2.7em;
-			}
+			& .container {
+				padding: var(--small-padding);
+				flex: 2;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
 
-			& p {
-				font-size: 1.4em;
-			}
+				& h1 {
+					font-size: 4em;
+				}
 
-			& h2 {
-				font-size: 2em;
-				margin-bottom: 1rem;
-				text-align: left;
-				text-transform: uppercase;
+				& p {
+					font-size: 1.6em;
+				}
+
+				& h2 {
+					font-size: 2.4em;
+					margin-bottom: 1rem;
+					text-align: left;
+					text-transform: uppercase;
+				}
 			}
 		}
-	}
 
-	&:nth-of-type(odd):not(:first-of-type) {
-		background-color: hsl(
-			var(--tertiary-hue),
-			var(--tertiary-saturation),
-			calc(var(--tertiary-lightness) + 25%)
-		);
+		&:nth-of-type(odd):not(:first-of-type) {
+			background-color: hsl(
+				var(--tertiary-hue),
+				var(--tertiary-saturation),
+				calc(var(--tertiary-lightness) + 25%)
+			);
 
-		/* &:before {
+			/* &:before {
 			content: "";
 			position: absolute;
 			left: 0;
@@ -85,55 +88,45 @@ section {
 			background-color: var(--background-color);
 			transform: skewY(-2deg);
 		} */
+		}
 	}
-}
 
-#call-to-action-footer {
-	text-align: center;
-
-	& h2 {
-		font-size: 2.6em;
+	& > #call-to-action-footer {
 		text-align: center;
-		text-transform: uppercase;
+
+		& h2 {
+			font-size: 3em;
+			text-align: center;
+			text-transform: uppercase;
+		}
 	}
 }
 
 @media screen and (min-width: 30rem) {
-	section {
-		padding: var(--page-padding);
-
-		&:not(:first-of-type) {
-			padding: calc(var(--page-padding) * 3) var(--page-padding);
-		}
-
-		&:first-of-type .container {
+	main {
+		& > section {
+			font-size: 0.8rem;
 			padding: var(--page-padding);
 
-			& h1 {
-				font-size: 4em;
+			&:not(:first-of-type) {
+				padding: calc(var(--page-padding) * 3) var(--page-padding);
 			}
 
-			& p {
-				font-size: 1.6em;
-			}
-
-			& h2 {
-				font-size: 2.4em;
+			&:first-of-type .container {
+				padding: var(--page-padding);
 			}
 		}
-	}
 
-	#call-to-action-footer {
-		padding: calc(var(--page-padding) * 2);
-
-		& h2 {
-			font-size: 3em;
+		& > #call-to-action-footer {
+			padding: calc(var(--page-padding) * 2);
 		}
 	}
 }
 
 @media screen and (min-width: 45rem) {
-	section {
+	main > section {
+		font-size: 1rem;
+
 		& > div {
 			display: flex;
 			gap: 1rem;
@@ -160,31 +153,32 @@ section {
 }
 
 @media screen and (min-width: 55rem) {
-	section {
-		&:first-of-type {
-			font-size: 0.8rem;
-			flex-direction: row;
-			height: 100vh;
+	main {
+		& > section {
+			&:first-of-type {
+				flex-direction: row;
+				height: 100vh;
 
-			&::after {
-				/* Foto von <a href="https://unsplash.com/@cgower?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Christopher Gower</a> auf <a href="https://unsplash.com/de/s/fotos/digital?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+				&::after {
+					/* Foto von <a href="https://unsplash.com/@cgower?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Christopher Gower</a> auf <a href="https://unsplash.com/de/s/fotos/digital?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
          */
-				content: "";
-				background-image: url(/images/background.jpg);
-				background-size: cover;
-				background-clip: content-box;
-				flex: 1;
-				margin: auto 2rem;
-				height: 50%;
-			}
+					content: "";
+					background-image: url(/images/background.jpg);
+					background-size: cover;
+					background-clip: content-box;
+					flex: 1;
+					margin: auto 2rem;
+					height: 50%;
+				}
 
-			.container {
-				display: initial;
+				.container {
+					display: initial;
+				}
 			}
 		}
-	}
 
-	#call-to-action-footer {
-		padding: calc(var(--page-padding) * 3);
+		& > #call-to-action-footer {
+			padding: calc(var(--page-padding) * 3);
+		}
 	}
 }
