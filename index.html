@@ -16,9 +16,19 @@
 			href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
 			as="style"
 		/>
-		<link rel="stylesheet" href="dist/main.css" media="screen" />
+		<link rel="stylesheet" href="dist/style.css" media="screen" />
 
 		<script type="module" src="main.mjs"></script>
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Organization",
+				"name": "9Bytes",
+				"url": "https://www.9bytes.de/",
+				"logo": "https://www.9bytes.de/images/logo.png",
+				"description": "9Bytes ist eine innovative IT-Webagentur, die erstklassige Webentwicklungsdienstleistungen, App-Entwicklungsdienstleistungen und E-Commerce-Lösungen anbietet. Unser erfahrenes Team aus Entwicklern und Designern ist darauf spezialisiert, individuelle Lösungen zu entwickeln, die auf die spezifischen Bedürfnisse unserer Kunden zugeschnitten sind."
+			}
+		</script>
 	</head>
 
 	<body>
@@ -314,47 +324,6 @@
 					Jetzt kostenloses Beratungsgespräch vereinbaren
 				</button>
 			</section>
-
-			<form
-				id="cta"
-				action="https://formspree.io/f/mnqyblap"
-				method="post"
-				class="modal"
-			>
-				<a href="#" class="modalClose" hidden aria-hidden="true"></a>
-				<div>
-					<section>
-						<a href="#" class="modalClose" hidden aria-hidden="true"></a>
-						<h2>Kostenloses Beratungsgespräch vereinbaren</h2>
-						<p>
-							Erhalten Sie eine kostenlose Beratung von unseren Experten und
-							lassen Sie uns gemeinsam herausfinden, wie wir Ihnen helfen
-							können.
-						</p>
-						<div>
-							<fieldset>
-								<label class="honey-field">
-									Email
-									<input type="text" name="honeypot" />
-								</label>
-								<label>
-									Name (optional)<br />
-									<input name="name" /><br /> </label
-								><label>
-									Email<br />
-									<input type="email" name="userName" required /><br />
-								</label>
-								<label>
-									Telefon (optional)<br />
-									<input type="tel" name="phone" /><br />
-								</label>
-							</fieldset>
-
-							<button>Abschicken</button>
-						</div>
-					</section>
-				</div>
-			</form>
 		</main>
 
 		<footer>
@@ -368,5 +337,45 @@
 				</li>
 			</ul>
 		</footer>
+
+		<form
+			id="cta"
+			action="https://formspree.io/f/mnqyblap"
+			method="post"
+			class="modal"
+		>
+			<a href="#" class="modalClose" hidden aria-hidden="true"></a>
+			<div>
+				<section>
+					<a href="#" class="modalClose" hidden aria-hidden="true"></a>
+					<h2>Kostenloses Beratungsgespräch vereinbaren</h2>
+					<p>
+						Erhalten Sie eine kostenlose Beratung von unseren Experten und
+						lassen Sie uns gemeinsam herausfinden, wie wir Ihnen helfen können.
+					</p>
+					<div>
+						<fieldset>
+							<label class="honey-field">
+								Email
+								<input type="email" name="honeypot" />
+							</label>
+							<label>
+								Name (optional)<br />
+								<input name="name" /><br /> </label
+							><label>
+								Email<br />
+								<input type="email" name="userName" required /><br />
+							</label>
+							<label>
+								Telefon (optional)<br />
+								<input type="tel" name="phone" /><br />
+							</label>
+						</fieldset>
+
+						<button>Abschicken</button>
+					</div>
+				</section>
+			</div>
+		</form>
 	</body>
 </html>

@@ -5,7 +5,7 @@
 	"main": "index.mjs",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"build-css": "postcss css/main.css -o dist/main.min.css",
+		"build": "postcss css/style.css -o build/style.min.css && node build.mjs && ./upload.sh",
 		"watch-css": "postcss css/*.css -d dist --watch",
 		"dev": "concurrently \"live-server\" \"npm run watch-css\""
 	},
@@ -18,11 +18,13 @@
 	"license": "UNLICENSED",
 	"devDependencies": {
 		"autoprefixer": "^10.4.14",
+		"cheerio": "^1.0.0-rc.12",
 		"concurrently": "^7.6.0",
 		"cssnano": "^5.1.15",
 		"live-server": "^1.2.2",
 		"postcss": "^8.4.21",
 		"postcss-cli": "^10.1.0",
+		"postcss-import": "^15.1.0",
 		"postcss-nesting": "^11.2.1",
 		"prettier": "^2.8.4"
 	}

@@ -10,10 +10,11 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	overflow: auto;
+	overflow: hidden;
 }
 
 .modal {
+	position: fixed;
 	left: -100vw;
 	opacity: 0;
 	padding: 1em;
@@ -60,6 +61,13 @@
 			& h2 {
 				font-size: 1.5em;
 				text-align: center;
+			}
+
+			& .honey-field {
+				position: absolute;
+				left: -9999px;
+				visibility: hidden;
+				display: none;
 			}
 
 			& button {
