@@ -5,7 +5,7 @@
 	"main": "index.mjs",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"build": "postcss css/style.css -o build/style.min.css && node build.mjs && ./upload.sh",
+		"build": "postcss css/style.css -o build/style.min.css && node build.mjs",
 		"watch-css": "postcss css/*.css -d dist --watch",
 		"dev": "concurrently \"live-server\" \"npm run watch-css\""
 	},
