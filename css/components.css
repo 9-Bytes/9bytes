@@ -89,14 +89,6 @@ button {
 	}
 }
 
-nav {
-	padding: 0 var(--page-padding);
-
-	& a:hover {
-		border-bottom: none;
-	}
-}
-
 fieldset {
 	padding: 0;
 	border: none;
@@ -117,6 +109,7 @@ label {
 }
 
 input,
+textarea,
 select {
 	--border-radius: 10px;
 	width: 100%;

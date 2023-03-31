@@ -37,6 +37,16 @@ body {
 	}
 }
 
+nav {
+	margin: 0 auto;
+	padding: 0;
+	max-width: var(--max-width);
+
+	& a:hover {
+		border-bottom: none;
+	}
+}
+
 main {
 	max-width: var(--max-width);
 	margin: 0 auto;
@@ -47,6 +57,7 @@ main {
 }
 
 footer {
+	margin: 0 auto;
 	max-width: var(--max-width);
 	padding: var(--page-padding);
 	background: var(--neutral-variant);
