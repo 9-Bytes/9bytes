@@ -7,7 +7,7 @@ fs.copySync("datenschutz.html", "build/datenschutz.html");
 fs.copySync("impressum.html", "build/impressum.html");
 fs.copySync("main.mjs", "build/main.mjs");
 fs.copySync("images", "build/images");
-fs.copySync("robots.txt", "build/robots.txt");
+fs.copySync("mixed", "build");
 
 // Modify index.html file
 const htmlFiles = ["index", "datenschutz", "impressum"];

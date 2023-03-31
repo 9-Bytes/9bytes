@@ -38,12 +38,12 @@ main {
 		--small-padding: calc(var(--page-padding) / 2);
 		padding: var(--small-padding);
 		position: relative;
-		font-size: 0.8rem;
+		font-size: 0.6rem;
 
 		& h3 {
 			font-weight: 400;
 			font-style: italic;
-			font-size:1.5em;
+			font-size: 1.5em;
 			letter-spacing: -0.05em;
 		}
 
@@ -53,13 +53,13 @@ main {
 			display: flex;
 			flex-direction: column;
 			overflow: hidden;
+			height: 100vh;
 
 			& .container {
 				padding: var(--small-padding);
 				flex: 2;
 				display: flex;
 				flex-direction: column;
-				justify-content: space-between;
 
 				& h1 {
 					font-size: 4em;
@@ -79,9 +79,9 @@ main {
 			}
 		}
 
-		&:nth-of-type(odd):not(:first-of-type) {
+		&:nth-of-type(odd) {
 			background-color: black;
-			color:#fff;
+			color: #fff;
 		}
 	}
 
@@ -93,6 +93,12 @@ main {
 			text-align: center;
 			text-transform: uppercase;
 		}
+	}
+}
+
+@media screen and (min-height: 90rem) {
+	main > section:first-of-type {
+		height: 90rem;
 	}
 }
 
@@ -135,14 +141,14 @@ main {
 		}
 
 		&:nth-of-type(odd) {
-			& h2 {
-				text-align: right;
-			}
-
 			& > div {
 				flex-direction: row-reverse;
 			}
 		}
+	}
+
+	footer {
+		font-size: 1rem;
 	}
 }
 
@@ -151,7 +157,6 @@ main {
 		& > section {
 			&:first-of-type {
 				flex-direction: row;
-				height: 100vh;
 
 				&::after {
 					/* Foto von <a href="https://unsplash.com/@cgower?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Christopher Gower</a> auf <a href="https://unsplash.com/de/s/fotos/digital?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
@@ -165,7 +170,7 @@ main {
 					height: 50%;
 				}
 
-				.container {
+				& .container {
 					display: initial;
 				}
 			}
@@ -173,6 +178,24 @@ main {
 
 		& > #call-to-action-footer {
 			padding: calc(var(--page-padding) * 3);
+		}
+	}
+}
+
+@media screen and (min-width: 75rem) {
+	main > section {
+		&:not(:first-of-type) {
+			margin-left: -50vw;
+			margin-right: -50vw;
+			padding-left: 50vw;
+			padding-right: 50vw;
+		}
+
+		&:first-of-type {
+			margin-left: -50vw;
+			margin-right: -50vw;
+			padding-left: 50vw;
+			padding-right: 50vw;
 		}
 	}
 }

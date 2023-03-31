@@ -1,5 +1,5 @@
 body {
-	font-family: 'Roboto', sans-serif;
+	font-family: "Roboto", sans-serif;
 }
 
 h1 {
@@ -9,17 +9,19 @@ h1 {
 
 h2 {
 	margin-bottom: 1rem;
-	font-size:2em;
+	font-size: 2em;
 }
 
-h1,h2 {
-	font-family: 'Noto Serif Lao', serif;
+h1,
+h2 {
+	font-family: "Noto Serif Lao", serif;
 }
 
-p, ul {
+p,
+ul {
 	font-size: 1.5em;
-    font-weight: 300;
-    line-height: 1.5em;
+	font-weight: 300;
+	line-height: 1.5em;
 }
 
 picture {
@@ -41,14 +43,8 @@ img {
 	object-fit: cover;
 }
 
-.logo {
-	width:150px;
-	height:150px;
-}
-
 a {
-	/*color: var(--primary);*/
-	font-weight:400;
+	font-weight: 400;
 	color: var(--color4);
 	text-decoration: none;
 	border-bottom: 0;
@@ -74,11 +70,12 @@ button {
 	border-color: var(--secondary);
 	border-style: solid;
 	cursor: pointer;
-	transition: background-color 0.3s ease-in-out;
-	font-family: 'Noto Serif Lao', serif;
+	transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+	font-family: "Noto Serif Lao", serif;
 	font-weight: 700;
 
-	&:hover {
+	&:hover,
+	&:focus {
 		--secondary-saturation: 80%;
 		--secondary: hsl(
 			var(--secondary-hue),

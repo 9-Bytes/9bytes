@@ -4,6 +4,12 @@
 	flex-direction: column;
 	gap: 1rem;
 	list-style-type: none;
+	justify-content: center;
+}
+
+.logo {
+	width: 150px;
+	height: 3rem;
 }
 
 .cta {
@@ -50,13 +56,13 @@
 		}
 
 		& .glow-line {
-			stroke: var(--glow-line-color);
+			/* stroke: var(--glow-line-color); */
 			stroke-width: var(--glow-line-thickness);
 		}
 
 		& .glow-blur {
 			filter: blur(var(--glow-blur-size));
-			stroke: var(--glow-blur-color);
+			/* stroke: var(--glow-blur-color); */
 			stroke-width: var(--glow-blur-size);
 		}
 	}
