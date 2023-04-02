@@ -29,7 +29,7 @@ body {
 	padding: 0;
 	color: #333;
 	background-color: var(--neutral-variant);
-	font-family: "Open Sans", sans-serif;
+	font-family: "Roboto", sans-serif;
 	overflow-x: hidden;
 
 	& * {
@@ -45,11 +45,6 @@ nav {
 	& a:hover {
 		border-bottom: none;
 	}
-}
-
-main {
-	max-width: var(--max-width);
-	margin: 0 auto;
 }
 
 .legal-page {

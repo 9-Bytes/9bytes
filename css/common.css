@@ -8,8 +8,9 @@
 }
 
 .logo {
-	width: 150px;
-	height: 3rem;
+	max-height: 3rem;
+	width: auto;
+	max-width: 100%;
 }
 
 .cta {

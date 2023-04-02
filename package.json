@@ -1,6 +1,12 @@
 {
-	"name": "landing-page",
+	"name": "9bytes",
 	"version": "1.0.0",
+	"author": {
+		"name": "Pascal Clanget"
+	},
+	"contributors": [
+		"Sebastian Hof"
+	],
 	"description": "Website for Bassi and Pascal",
 	"main": "index.mjs",
 	"scripts": {
@@ -14,7 +20,6 @@
 		"css",
 		"javascript"
 	],
-	"author": "Gh05d",
 	"license": "UNLICENSED",
 	"devDependencies": {
 		"autoprefixer": "^10.4.14",

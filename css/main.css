@@ -1,44 +1,11 @@
-.gradient-background {
-	--gradient-start: hsl(
-		var(--primary-hue) var(--primary-saturation)
-			calc(var(--primary-lightness) - 15%)
-	);
-	--gradient-middle: hsl(
-		var(--primary-hue) var(--primary-saturation)
-			calc(var(--primary-lightness) - 5%)
-	);
-	background: linear-gradient(
-		90deg,
-		var(--gradient-start),
-		var(--gradient-middle),
-		var(--primary),
-		var(--gradient-start)
-	);
-	background-size: 200%;
-	animation: waves 20s infinite alternate;
-	color: white;
-}
-
-.black-background {
-	display: overflow;
-	background-color: black;
-}
-
-@keyframes waves {
-	from {
-		background-position: right;
-	}
-	to {
-		background-position: left;
-	}
-}
-
 main {
 	& > section {
 		--small-padding: calc(var(--page-padding) / 2);
 		padding: var(--small-padding);
-		position: relative;
 		font-size: 0.6rem;
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
 
 		& h3 {
 			font-weight: 400;
@@ -47,19 +14,22 @@ main {
 			letter-spacing: -0.05em;
 		}
 
+		& .section-content {
+			max-width: var(--max-width);
+			gap: 2rem;
+		}
+
 		&:first-of-type {
 			color: white;
 			padding: 0;
-			display: flex;
-			flex-direction: column;
-			overflow: hidden;
-			height: 100vh;
+			min-height: 100vh;
 
 			& .container {
+				max-width: var(--max-width);
 				padding: var(--small-padding);
-				flex: 2;
 				display: flex;
 				flex-direction: column;
+				justify-content: flex-start;
 
 				& h1 {
 					font-size: 4em;
@@ -86,7 +56,16 @@ main {
 	}
 
 	& > #call-to-action-footer {
-		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: calc(var(--page-padding) * 3);
+		background-color: unset;
+		background-image: url(/images/woods-small.avif),
+			linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+		background-size: cover;
+		background-blend-mode: multiply;
 
 		& h2 {
 			font-size: 3em;
@@ -102,42 +81,28 @@ main {
 	}
 }
 
-@media screen and (min-width: 30rem) {
-	main {
-		& > section {
-			font-size: 0.9rem;
-			padding: var(--page-padding);
-
-			&:not(:first-of-type) {
-				padding: calc(var(--page-padding) * 3) var(--page-padding);
-			}
-
-			&:first-of-type .container {
-				padding: var(--page-padding);
-			}
-		}
-
-		& > #call-to-action-footer {
-			padding: calc(var(--page-padding) * 2);
-		}
-	}
-}
-
 @media screen and (min-width: 45rem) {
 	main > section {
-		font-size: 1rem;
+		font-size: 0.8rem;
 
-		& > div {
+		& .section-content {
 			display: flex;
 			gap: 1rem;
+			padding: 8rem 2rem;
 
 			& > * {
 				flex: 1;
 			}
 		}
 
-		&:first-of-type h2 {
-			margin-top: 3rem;
+		&:first-of-type {
+			& p {
+				text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+			}
+
+			& h2 {
+				margin-top: 3rem;
+			}
 		}
 
 		&:nth-of-type(odd) {
@@ -155,47 +120,24 @@ main {
 @media screen and (min-width: 55rem) {
 	main {
 		& > section {
+			font-size: 1rem;
+
 			&:first-of-type {
-				flex-direction: row;
-
-				&::after {
-					/* Foto von <a href="https://unsplash.com/@cgower?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Christopher Gower</a> auf <a href="https://unsplash.com/de/s/fotos/digital?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-         */
-					content: "";
-					background-image: url(/images/background.jpg);
-					background-size: cover;
-					background-clip: content-box;
-					flex: 1;
-					margin: auto 2rem;
-					height: 50%;
-				}
-
-				& .container {
-					display: initial;
-				}
+				background-color: unset;
+				background-image: url(/images/background.avif),
+					linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+				background-size: cover;
+				background-blend-mode: multiply;
 			}
 		}
 
 		& > #call-to-action-footer {
-			padding: calc(var(--page-padding) * 3);
-		}
-	}
-}
+			background-image: url(/images/woods.avif),
+				linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
 
-@media screen and (min-width: 75rem) {
-	main > section {
-		&:not(:first-of-type) {
-			margin-left: -50vw;
-			margin-right: -50vw;
-			padding-left: 50vw;
-			padding-right: 50vw;
-		}
-
-		&:first-of-type {
-			margin-left: -50vw;
-			margin-right: -50vw;
-			padding-left: 50vw;
-			padding-right: 50vw;
+			& .cta {
+				margin-top: 4rem;
+			}
 		}
 	}
 }
