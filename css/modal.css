@@ -56,6 +56,7 @@
 
 			& p {
 				margin-bottom: 0;
+				font-size: 1em;
 			}
 
 			& h2 {
@@ -74,6 +75,26 @@
 				width: 100%;
 			}
 		}
+	}
+
+	& .buttons {
+		margin: 1.5rem 0;
+		display: flex;
+		flex-direction: column-reverse;
+		gap: 2rem;
+	}
+
+	& .opaque-button {
+		--button-color: #ccc;
+		background-color: var(--button-color);
+		border-color: var(--button-color);
+		color: #999;
+	}
+
+	& button[name="select-consent"] {
+		background-color: unset;
+		border-color: white;
+		color: #ccd139;
 	}
 }
 
@@ -110,5 +131,12 @@ nav .modalClose:hover {
 		& > div > section {
 			font-size: 1rem;
 		}
+	}
+}
+
+@media screen and (min-width: 50rem) {
+	.modal .buttons {
+		flex-direction: row;
+		gap: 1rem;
 	}
 }

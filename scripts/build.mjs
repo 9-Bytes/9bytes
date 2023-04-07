@@ -5,7 +5,7 @@ import * as cheerio from "cheerio";
 fs.copySync("index.html", "build/index.html");
 fs.copySync("datenschutz.html", "build/datenschutz.html");
 fs.copySync("impressum.html", "build/impressum.html");
-fs.copySync("main.mjs", "build/main.mjs");
+fs.copySync("scripts", "build/scripts");
 fs.copySync("images", "build/images");
 fs.copySync("misc", "build/misc");
 

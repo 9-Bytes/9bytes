@@ -1,0 +1,21 @@
+{
+	"env": {
+		"es6": true,
+		"node": true
+	},
+	"parserOptions": {
+		"ecmaVersion": 2019,
+		"sourceType": "module"
+	},
+	"extends": ["eslint:recommended"],
+	"rules": {
+		// Add rules specific to .mjs files here
+		"no-console": "off",
+		"no-case-declarations": "off"
+	},
+	"globals": {
+		"window": true,
+		"document": true,
+		"localStorage": true
+	}
+}

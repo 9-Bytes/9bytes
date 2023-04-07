@@ -154,3 +154,8 @@ select {
 		padding: 1rem 2rem;
 	}
 }
+
+input[type="checkbox"] {
+	display: inline;
+	width: unset;
+}

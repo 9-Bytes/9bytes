@@ -11,7 +11,7 @@
 	"main": "index.mjs",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"build": "postcss css/style.css -o build/style.min.css && node build.mjs",
+		"build": "postcss css/style.css -o build/style.min.css && node scripts/build.mjs",
 		"watch-css": "postcss css/*.css -d dist --watch",
 		"dev": "concurrently \"live-server\" \"npm run watch-css\""
 	},
@@ -26,6 +26,7 @@
 		"cheerio": "^1.0.0-rc.12",
 		"concurrently": "^7.6.0",
 		"cssnano": "^5.1.15",
+		"eslint": "^8.37.0",
 		"live-server": "^1.2.2",
 		"postcss": "^8.4.21",
 		"postcss-cli": "^10.1.0",

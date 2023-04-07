@@ -19,10 +19,20 @@ main {
 			gap: 2rem;
 		}
 
+		&:nth-of-type(odd):not(:first-of-type) {
+			background-color: black;
+			color: #fff;
+		}
+
 		&:first-of-type {
 			color: white;
 			padding: 0;
 			min-height: 100vh;
+			background-image: url(/images/background-small.avif),
+				linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+			background-position: center center;
+			background-size: cover;
+			background-blend-mode: multiply;
 
 			& .container {
 				max-width: var(--max-width);
@@ -47,11 +57,6 @@ main {
 					text-align: left;
 				}
 			}
-		}
-
-		&:nth-of-type(odd) {
-			background-color: black;
-			color: #fff;
 		}
 	}
 
@@ -123,11 +128,9 @@ main {
 			font-size: 1rem;
 
 			&:first-of-type {
-				background-color: unset;
+				background-position: unset;
 				background-image: url(/images/background.avif),
 					linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
-				background-size: cover;
-				background-blend-mode: multiply;
 			}
 		}
 
