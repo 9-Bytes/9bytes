@@ -1,4 +1,4 @@
-import { removeTrackingScripts } from "./functions.mjs";
+import { addTrackingScripts } from "./functions.mjs";
 import { ACCEPTED, CONSENT, MARKETING, TRACKING } from "./variables.mjs";
 
 const cookieSelectButtons = document.querySelectorAll("#consent-select button");
@@ -29,13 +29,13 @@ export default cookieSelectButtons.forEach(button => {
 					consentString += `:${marketingCheckbox.value}`;
 				}
 
-				if (!trackingCheckbox.checked && !marketingCheckbox.checked) {
-					removeTrackingScripts();
-				}
-
 				await localStorage.setItem(CONSENT, consentString);
 
 				window.location.href = "#";
+
+				if (trackingCheckbox.checked && marketingCheckbox.checked) {
+					addTrackingScripts();
+				}
 				break;
 
 			case "accept-consent":
@@ -47,6 +47,7 @@ export default cookieSelectButtons.forEach(button => {
 					`${ACCEPTED}:${new Date()}:${MARKETING}:${TRACKING}`
 				);
 				window.location.href = "#";
+				addTrackingScripts();
 		}
 	});
 });
