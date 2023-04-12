@@ -38,6 +38,7 @@
 			href="misc/android-chrome-512x512.png"
 		/>
 		<link rel="stylesheet" href="dist/style.css" media="screen" />
+		<script type="module" src="/scripts/check-consent.mjs"></script>
 
 		<script type="application/ld+json">
 			{
@@ -49,30 +50,9 @@
 				"description": "9Bytes ist eine innovative IT-Webagentur, die erstklassige Webentwicklungsdienstleistungen, App-Entwicklungsdienstleistungen und E-Commerce-Lösungen anbietet. Unser erfahrenes Team aus Entwicklern und Designern ist darauf spezialisiert, individuelle Lösungen zu entwickeln, die auf die spezifischen Bedürfnisse unserer Kunden zugeschnitten sind."
 			}
 		</script>
-
-		<script>
-			(function (w, d, s, l, i) {
-				w[l] = w[l] || [];
-				w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-				var f = d.getElementsByTagName(s)[0],
-					j = d.createElement(s),
-					dl = l != "dataLayer" ? "&l=" + l : "";
-				j.async = true;
-				j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-				f.parentNode.insertBefore(j, f);
-			})(window, document, "script", "dataLayer", "GTM-K628SXN");
-		</script>
 	</head>
 
 	<body>
-		<noscript
-			><iframe
-				src="https://www.googletagmanager.com/ns.html?id=GTM-K628SXN"
-				height="0"
-				width="0"
-				style="display: none; visibility: hidden"
-			></iframe
-		></noscript>
 		<nav>
 			<ul class="list">
 				<li>
@@ -127,6 +107,99 @@
 					>e-recht24.de</a
 				>
 			</p>
+			<form id="consent" class="modal">
+				<div>
+					<section>
+						<h2>Diese Webseite verwendet Cookies</h2>
+						<p>
+							Wir verwenden Cookies, um Inhalte und Anzeigen zu personalisieren,
+							Funktionen für soziale Medien anbieten zu können und die Zugriffe
+							auf unsere Website zu analysieren. Außerdem geben wir
+							Informationen zu Ihrer Verwendung unserer Website an unsere
+							Partner für soziale Medien, Werbung und Analysen weiter. Unsere
+							Partner führen diese Informationen möglicherweise mit weiteren
+							Daten zusammen, die Sie ihnen bereitgestellt haben oder die sie im
+							Rahmen Ihrer Nutzung der Dienste gesammelt haben.
+						</p>
+						<p>
+							Cookies sind kleine Textdateien, die von Webseiten verwendet
+							werden, um die Benutzererfahrung effizienter zu gestalten. Laut
+							Gesetz können wir Cookies auf Ihrem Gerät speichern, wenn diese
+							für den Betrieb dieser Seite unbedingt notwendig sind. Für alle
+							anderen Cookie-Typen benötigen wir Ihre Erlaubnis. Diese Seite
+							verwendet unterschiedliche Cookie-Typen. Einige Cookies werden von
+							Drittparteien platziert, die auf unseren Seiten erscheinen. Sie
+							können Ihre Einwilligung jederzeit von der Cookie-Erklärung auf
+							unserer Website ändern oder widerrufen. Erfahren Sie in unserer
+							<a target="_blank" href="/datenschutz.html"
+								>Datenschutzrichtlinie</a
+							>
+							mehr darüber, wer wir sind, wie Sie uns kontaktieren können und
+							wie wir personenbezogene Daten verarbeiten. Bitte geben Sie Ihre
+							Einwilligungs-ID und das Datum an, wenn Sie uns bezüglich Ihrer
+							Einwilligung kontaktieren.
+						</p>
+						<div class="buttons">
+							<button
+								type="button"
+								class="opaque-button"
+								name="decline-consent"
+							>
+								Ablehnen
+							</button>
+							<button type="button" name="accept-consent">OK</button>
+						</div>
+
+						<button type="button" name="select-consent">Details zeigen</button>
+					</section>
+				</div>
+			</form>
+
+			<form id="consent-select" class="modal">
+				<div>
+					<section>
+						<h2>Diese Webseite verwendet Cookies</h2>
+						<fieldset>
+							<input type="checkbox" value="ignore" style="display: none" />
+							<label>
+								<input type="checkbox" checked disabled value="necessary" />
+								Notwendige Cookies helfen dabei, eine Webseite nutzbar zu
+								machen, indem sie Grundfunktionen wie Seitennavigation und
+								Zugriff auf sichere Bereiche der Webseite ermöglichen. Die
+								Webseite kann ohne diese Cookies nicht richtig funktionieren.
+							</label>
+							<label>
+								<input type="checkbox" value="TRACKING" />
+								Statistik-Cookies helfen Webseiten-Besitzern zu verstehen, wie
+								Besucher mit Webseiten interagieren, indem Informationen anonym
+								gesammelt und gemeldet werden.
+							</label>
+							<label>
+								<input type="checkbox" value="MARKETING" />
+								Marketing-Cookies werden verwendet, um Besuchern auf Webseiten
+								zu folgen. Die Absicht ist, Anzeigen zu zeigen, die relevant und
+								ansprechend für den einzelnen Benutzer sind und daher wertvoller
+								für Publisher und werbetreibende Drittparteien sind.
+							</label>
+						</fieldset>
+
+						<div class="buttons">
+							<button
+								type="button"
+								class="opaque-button"
+								name="accept-selection"
+							>
+								Auswahl erlauben
+							</button>
+							<button type="button" name="accept-consent">Alle zulassen</button>
+						</div>
+
+						<button type="button" name="select-consent">
+							Details ausblenden
+						</button>
+					</section>
+				</div>
+			</form>
 		</main>
 	</body>
 </html>

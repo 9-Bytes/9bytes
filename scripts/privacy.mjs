@@ -1,4 +1,5 @@
 import consentForm from "./consentForm.mjs";
+import { addConsentListeners, checkConsent } from "./functions.mjs";
 import { ACCEPTED, CONSENT, MARKETING, TRACKING } from "./variables.mjs";
 
 (async function init() {
@@ -20,3 +21,6 @@ import { ACCEPTED, CONSENT, MARKETING, TRACKING } from "./variables.mjs";
 		}
 	}
 })();
+
+addConsentListeners();
+checkConsent();
