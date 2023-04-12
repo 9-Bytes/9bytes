@@ -18,7 +18,8 @@
 	"keywords": [
 		"html",
 		"css",
-		"javascript"
+		"javascript",
+		"postcss"
 	],
 	"license": "UNLICENSED",
 	"devDependencies": {

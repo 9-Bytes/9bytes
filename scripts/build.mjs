@@ -2,18 +2,17 @@ import fs from "fs-extra";
 import * as cheerio from "cheerio";
 
 // Copy files to build folder
-fs.copySync("index.html", "build/index.html");
-fs.copySync("datenschutz.html", "build/datenschutz.html");
-fs.copySync("impressum.html", "build/impressum.html");
+const destDir = "./build";
+
+const htmlFiles = fs.readdirSync("./").filter(file => file.endsWith(".html"));
+
+htmlFiles.forEach(file => fs.copySync(file, `${destDir}/${file}`));
 fs.copySync("scripts", "build/scripts");
 fs.copySync("images", "build/images");
 fs.copySync("misc", "build/misc");
 
-// Modify index.html file
-const htmlFiles = ["index", "datenschutz", "impressum"];
-
 for (const fileName of htmlFiles) {
-	const file = `build/${fileName}.html`;
+	const file = `build/${fileName}`;
 	const html = fs.readFileSync(file);
 	const $ = cheerio.load(html);
 
