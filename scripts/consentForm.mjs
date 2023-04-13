@@ -1,9 +1,11 @@
-import { addTrackingScripts } from "./functions.mjs";
+import { setCookie } from "./functions.mjs";
 import { ACCEPTED, CONSENT, MARKETING, TRACKING } from "./variables.mjs";
 
 const cookieSelectButtons = document.querySelectorAll("#consent-select button");
 
 export default cookieSelectButtons.forEach(button => {
+	window.dataLayer = window.dataLayer || [];
+
 	button.addEventListener("click", async event => {
 		switch (event.target.name) {
 			case "select-consent":
@@ -19,7 +21,7 @@ export default cookieSelectButtons.forEach(button => {
 					'input[value="MARKETING"]'
 				);
 
-				let consentString = `${ACCEPTED}:${new Date()}`;
+				let consentString = ACCEPTED;
 
 				if (trackingCheckbox.checked) {
 					consentString += `:${trackingCheckbox.value}`;
@@ -29,25 +31,28 @@ export default cookieSelectButtons.forEach(button => {
 					consentString += `:${marketingCheckbox.value}`;
 				}
 
-				await localStorage.setItem(CONSENT, consentString);
+				setCookie(CONSENT, consentString);
+				window.dataLayer.push({
+					event: "user_consent_preferences",
+					analytics_storage: trackingCheckbox.checked ? "granted" : "denied",
+					ad_storage: marketingCheckbox.checked ? "granted" : "denied",
+				});
 
 				window.location.href = "#";
 
-				if (trackingCheckbox.checked && marketingCheckbox.checked) {
-					addTrackingScripts();
-				}
 				break;
 
 			case "accept-consent":
 				document.querySelector('input[value="TRACKING"]').checked = true;
 				document.querySelector('input[value="MARKETING"]').checked = true;
 
-				await localStorage.setItem(
-					CONSENT,
-					`${ACCEPTED}:${new Date()}:${MARKETING}:${TRACKING}`
-				);
+				setCookie(CONSENT, `${ACCEPTED}:${MARKETING}:${TRACKING}`);
+				window.dataLayer.push({
+					event: "user_consent_preferences",
+					analytics_storage: "granted",
+					ad_storage: "granted",
+				});
 				window.location.href = "#";
-				addTrackingScripts();
 		}
 	});
 });
