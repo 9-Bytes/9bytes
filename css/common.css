@@ -14,13 +14,6 @@
 }
 
 .cta {
-	--container-offset: 25px;
-	--glow-line-color: white;
-	--glow-line-thickness: 2px;
-	--glow-blur-color: var(--primary);
-	--glow-blur-size: 3px;
-	--animation-length: 900ms;
-	--glow-line-length: 10px;
 	font-size: 1rem;
 	margin-top: 2rem;
 	position: relative;
