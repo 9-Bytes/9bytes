@@ -10,10 +10,11 @@
 	"description": "Website for Bassi and Pascal",
 	"main": "index.mjs",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"build": "postcss css/style.css -o build/style.min.css && node scripts/build.mjs",
+		"compile": "node compile-templates.mjs",
+		"build": "postcss css/style.css -o deploy/style.min.css && node build.mjs",
 		"watch-css": "postcss css/*.css -d dist --watch",
-		"dev": "concurrently \"live-server\" \"npm run watch-css\""
+		"dev": "concurrently \"live-server\" \"npm run watch-css\"",
+		"start": "live-server --cors --port=3000 deploy/"
 	},
 	"keywords": [
 		"html",
@@ -24,18 +25,17 @@
 	"license": "UNLICENSED",
 	"devDependencies": {
 		"autoprefixer": "^10.4.14",
+		"browser-sync": "^2.29.1",
 		"cheerio": "^1.0.0-rc.12",
 		"concurrently": "^7.6.0",
 		"cssnano": "^5.1.15",
 		"eslint": "^8.37.0",
+		"handlebars": "^4.7.7",
 		"live-server": "^1.2.2",
 		"postcss": "^8.4.21",
 		"postcss-cli": "^10.1.0",
 		"postcss-import": "^15.1.0",
 		"postcss-nesting": "^11.2.1",
 		"prettier": "^2.8.4"
-	},
-	"dependencies": {
-		"handlebars": "^4.7.7"
 	}
 }

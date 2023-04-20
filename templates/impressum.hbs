@@ -1,0 +1,54 @@
+<html lang="de">
+	<head>
+    {{#> head
+      title="9Bytes - Impressum"
+      description="9Bytes - Impressum"
+    }}
+		  <script type="module" src="/scripts/check-consent.mjs"></script>
+    {{/ head}}
+	</head>
+
+	<body>
+    {{> gTagBody}}
+    {{> header}}
+
+		<main class="main-wrapper">
+			<h1>Impressum</h1>
+
+			<h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
+			<p>
+				<b>Sebastian Hof</b><br />
+				9Bytes Webdesign (Einzelunternehmer)<br />
+				D&uuml;sselthaler Str. 20<br />
+				<b>40211</b>
+				D&uuml;sseldorf
+			</p>
+
+			<h2>Kontakt</h2>
+			<p>
+				Telefon: (+49)163/9706696<br />
+				Telefax: (+49)163/9706696<br />
+				E-Mail: shof87@googlemail.com
+			</p>
+
+			<h2>Umsatzsteuer-ID</h2>
+			<p>
+				Umsatzsteuer-Identifikationsnummer gem&auml;&szlig; &sect; 27 a
+				Umsatzsteuergesetz:<br />
+				DE337836331
+			</p>
+
+			<h2>
+				Verbraucher&shy;streit&shy;beilegung/Universal&shy;schlichtungs&shy;stelle
+			</h2>
+			<p>
+				Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren
+				vor einer Verbraucherschlichtungsstelle teilzunehmen.
+			</p>
+
+      {{> consentModal}}
+		</main>
+    
+    {{> footer}}
+	</body>
+</html>
