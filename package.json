@@ -8,33 +8,37 @@
 		"Sebastian Hof"
 	],
 	"description": "Website for Bassi and Pascal",
-	"main": "index.mjs",
+	"license": "UNLICENSED",
 	"scripts": {
 		"compile": "node compile-templates.mjs",
-		"build": "postcss css/style.css -o deploy/style.min.css && node build.mjs",
-		"watch-css": "postcss css/*.css -d dist --watch",
-		"dev": "concurrently \"live-server\" \"npm run watch-css\"",
-		"start": "live-server --cors --port=3000 deploy/"
+		"dev": "gulp",
+		"build": "gulp build"
 	},
 	"keywords": [
 		"html",
 		"css",
 		"javascript",
-		"postcss"
+		"postcss",
+		"gulp"
 	],
-	"license": "UNLICENSED",
 	"devDependencies": {
 		"autoprefixer": "^10.4.14",
 		"browser-sync": "^2.29.1",
-		"cheerio": "^1.0.0-rc.12",
-		"concurrently": "^7.6.0",
 		"cssnano": "^5.1.15",
 		"eslint": "^8.37.0",
+		"gulp": "^4.0.2",
+		"gulp-avif": "^1.1.1",
+		"gulp-image-resize": "^0.13.1",
+		"gulp-imagemin": "^8.0.0",
+		"gulp-postcss": "^9.0.1",
+		"gulp-rename": "^2.0.0",
+		"gulp-uglify-es": "^3.0.0",
 		"handlebars": "^4.7.7",
-		"live-server": "^1.2.2",
+		"husky": "^8.0.3",
 		"postcss": "^8.4.21",
 		"postcss-cli": "^10.1.0",
 		"postcss-import": "^15.1.0",
+		"postcss-load-config": "^4.0.1",
 		"postcss-nesting": "^11.2.1",
 		"prettier": "^2.8.4"
 	}

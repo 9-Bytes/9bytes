@@ -21,7 +21,7 @@ for (const file of templates) {
 	const html = htmlTemplate();
 
 	const [fileName] = file.split(".");
-	fs.writeFileSync(`${fileName}.html`, html);
+	fs.writeFileSync(`build/${fileName}.html`, html);
 	htmlFiles.push(`${fileName}.html`);
 }
 
