@@ -1,5 +1,5 @@
 body {
-	font-family: "Roboto", sans-serif;
+	font-family: "Quicksand", sans-serif;
 }
 
 h1 {
@@ -48,7 +48,7 @@ a {
 	color: var(--color4);
 	text-decoration: none;
 	border-bottom: 0;
-	transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+	transition: color 0.15s ease-in-out, border-bottom 0.15s ease-in-out;
 
 	&:hover {
 		border-bottom: 2px solid var(--primary);
@@ -62,27 +62,45 @@ a {
 }
 
 button {
-	background-color: black;
-	color: var(--secondary);
-	padding: 0.8rem 1.2rem;
-	border-radius: 10px;
-	border-width: 5px;
+	background-color: transparent;
 	border-color: var(--secondary);
+	color: #fff;
+	/* border-radius: 10px; */
 	border-style: solid;
+	border-width: 3px;
+	color: #fff;
 	cursor: pointer;
-	transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-	font-family: "Noto Serif Lao", serif;
+	font-family: "Noto Serif Lao",serif;
 	font-weight: 700;
+	padding: .8rem 1.2rem;
+	transition: background-color 0.15s ease-in-out,color 0.15s ease-in-out;
+
+	
+	padding: 1.5rem 2.7rem;
+	border: 0.16em solid #FFFFFF;
+	margin: 0 0.3em 0.3em 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	text-align: center;
+	transition: all 0.15s;
 
 	&:hover,
 	&:focus {
-		--secondary-saturation: 80%;
-		--secondary: hsl(
-			var(--secondary-hue),
-			var(--secondary-saturation),
-			var(--secondary-lightness)
-		);
-		background-color: var(--secondary);
+		border-color:var(--secondary);
+		color:var(--secondary);
+	}
+}
+
+.modal button {
+	color:#000;
+	border-color:#000;
+	font-size:1.2em;
+
+	&:hover{
+		border-color:var(--secondary);
+		color:var(--secondary);
 	}
 }
 
@@ -121,10 +139,6 @@ select {
 	border-top-right-radius: var(--border-radius);
 	border-bottom: 2px solid var(--input-background-color);
 	transition: border 300ms ease-in-out;
-
-	&:valid {
-		border-bottom-color: var(--primary);
-	}
 
 	&:focus {
 		border-bottom-color: rgb(63, 107, 210);
