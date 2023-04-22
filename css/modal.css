@@ -11,6 +11,7 @@
 	width: 100%;
 	height: 100%;
 	overflow: auto;
+	font-size: 0.6rem;
 }
 
 .modal {
@@ -45,22 +46,19 @@
 			position: relative;
 			overflow: hidden;
 			padding: 2rem;
-			max-width: 38rem;
+			max-width: 50rem;
 			background: white;
 			border: 1px solid #0484;
 			border-radius: 0.5em;
 			box-shadow: 0 0.25em 1em #0006;
 			transform: scale(0);
 			transition: transform 0.3s;
-			font-size: 0.8rem;
 
 			& p {
 				margin-bottom: 0;
-				font-size: 1em;
 			}
 
 			& h2 {
-				font-size: 1.5em;
 				text-align: center;
 			}
 
@@ -127,16 +125,22 @@ nav .modalClose:hover {
 @media screen and (min-width: 25rem) {
 	.modal {
 		padding: 3rem;
-
-		& > div > section {
-			font-size: 1rem;
-		}
 	}
 }
 
 @media screen and (min-width: 50rem) {
-	.modal .buttons {
-		flex-direction: row;
-		gap: 1rem;
+	.modal {
+		font-size: 0.8rem;
+
+		& .buttons {
+			flex-direction: row;
+			gap: 1rem;
+		}
+	}
+}
+
+@media screen and (min-width: 90rem) {
+	.modal {
+		font-size: 1rem;
 	}
 }

@@ -5,7 +5,6 @@ body {
 	--tertiary: #ffbf69;
 	--color4: #ED2B2A;
 	--color5: #ff9f1c;
-
 	--neutral-hue: 0;
 	--neutral-saturation: 0%;
 	--neutral-lightness: 92%;
@@ -47,7 +46,7 @@ nav {
 	}
 }
 
-.legal-page {
+.main-wrapper {
 	padding: var(--page-padding);
 }
 

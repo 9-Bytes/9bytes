@@ -1,0 +1,27 @@
+<html lang="de">
+	<head>
+    {{#> head
+    title="9Bytes - Vielen Dank für Ihre Anfrage"
+    description="Vielen Dank für Ihre Anfrage. Wir werden uns schnellstmöglich bei Ihnen melden."
+    }}
+			<script type="module" src="/scripts/check-consent.mjs"></script>
+    {{/ head}}
+	</head>
+
+	<body>
+  {{> gTagBody}}
+  {{> header}}
+
+		<main class="main-wrapper">
+			<h1>Vielen Dank für Ihre Anfrage</h1>
+			<img src="images/thanks.avif" alt="Vielen Dank" />
+			<p>
+				Vielen Dank für Ihre Anfrage. Wir werden uns schnellstmöglich bei Ihnen
+				melden.
+			</p>
+		</main>
+
+  {{> consentModal}}
+	{{> footer}}
+	</body>
+</html>

@@ -61,3 +61,22 @@ export function getCookie(name) {
 
 	if (parts.length === 2) return parts.pop().split(";").shift();
 }
+
+export function scrollToTop() {
+	const scrollToTop = document.getElementById("scroll-to-top");
+	scrollToTop.style.display = "none";
+
+	window.addEventListener("scroll", () => {
+		if (window.scrollY > 500) scrollToTop.style.display = "block";
+		else scrollToTop.style.display = "none";
+	});
+
+	scrollToTop.addEventListener("click", event => {
+		event.preventDefault();
+
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
+	});
+}

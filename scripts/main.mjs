@@ -1,5 +1,9 @@
 import consentForm from "./consentForm.mjs";
-import { addConsentListeners, checkConsent } from "./functions.mjs";
+import {
+	addConsentListeners,
+	checkConsent,
+	scrollToTop,
+} from "./functions.mjs";
 
 const currentYear = new Date().getFullYear();
 document.getElementById("current-year").textContent = currentYear;
@@ -14,5 +18,6 @@ ctaForm.addEventListener("submit", event => {
 	}
 });
 
+scrollToTop();
 addConsentListeners();
 checkConsent();

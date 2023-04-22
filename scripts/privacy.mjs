@@ -1,5 +1,10 @@
 import consentForm from "./consentForm.mjs";
-import { addConsentListeners, checkConsent, getCookie } from "./functions.mjs";
+import {
+	addConsentListeners,
+	checkConsent,
+	getCookie,
+	scrollToTop,
+} from "./functions.mjs";
 import { ACCEPTED, CONSENT, MARKETING, TRACKING } from "./variables.mjs";
 
 const consentLink = document.querySelector('a[href="#consent-select"]');
@@ -18,5 +23,6 @@ consentLink?.addEventListener("click", () => {
 	}
 });
 
+scrollToTop();
 addConsentListeners();
 checkConsent();
