@@ -28,6 +28,7 @@
 		"eslint": "^8.37.0",
 		"gulp": "^4.0.2",
 		"gulp-avif": "^1.1.1",
+		"gulp-gm": "^0.0.9",
 		"gulp-image-resize": "^0.13.1",
 		"gulp-imagemin": "^8.0.0",
 		"gulp-postcss": "^9.0.1",
@@ -41,5 +42,9 @@
 		"postcss-load-config": "^4.0.1",
 		"postcss-nesting": "^11.2.1",
 		"prettier": "^2.8.4"
+	},
+	"dependencies": {
+		"gm": "^1.25.0",
+		"install": "^0.13.0"
 	}
 }
