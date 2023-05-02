@@ -65,42 +65,39 @@ button {
 	background-color: transparent;
 	border-color: var(--secondary);
 	color: #fff;
-	/* border-radius: 10px; */
 	border-style: solid;
 	border-width: 3px;
 	color: #fff;
 	cursor: pointer;
-	font-family: "Noto Serif Lao",serif;
+	font-family: "Noto Serif Lao", serif;
 	font-weight: 700;
-	padding: .8rem 1.2rem;
-	transition: background-color 0.15s ease-in-out,color 0.15s ease-in-out;
-
-	
+	padding: 0.8rem 1.2rem;
+	transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
 	padding: 1.5rem 2.7rem;
-	border: 0.16em solid #FFFFFF;
+	border: 0.16em solid #ffffff;
 	margin: 0 0.3em 0.3em 0;
 	box-sizing: border-box;
 	text-decoration: none;
 	text-transform: uppercase;
-	color: #FFFFFF;
+	color: #ffffff;
 	text-align: center;
 	transition: all 0.15s;
 
 	&:hover,
 	&:focus {
-		border-color:var(--secondary);
-		color:var(--secondary);
+		border-color: var(--secondary);
+		color: var(--secondary);
 	}
 }
 
 .modal button {
-	color:#000;
-	border-color:#000;
-	font-size:1.2em;
+	color: #000;
+	border-color: #000;
+	font-size: 1.2em;
 
-	&:hover{
-		border-color:var(--secondary);
-		color:var(--secondary);
+	&:hover {
+		border-color: var(--secondary);
+		color: var(--secondary);
 	}
 }
 
@@ -167,10 +164,7 @@ select {
 	& option {
 		padding: 1rem 2rem;
 	}
-
 }
-
-
 
 input[type="checkbox"] {
 	display: inline;
