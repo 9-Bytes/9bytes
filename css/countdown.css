@@ -1,15 +1,21 @@
 #countdown {
-	margin: 2rem 0 0;
 	--color: #ea4c4c;
+	margin: 2rem 0 0;
 
 	& h2 {
-		margin-bottom: 2.75rem;
 		text-align: center;
+		margin-bottom: 1rem;
 		font: 300 2.25em Quicksand;
 
 		& strong {
 			color: var(--color);
 		}
+	}
+
+	& .disclaimer {
+		margin: 1rem 0 2rem;
+		text-align: center;
+		font-size: 0.7rem;
 	}
 }
 
