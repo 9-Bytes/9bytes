@@ -1,5 +1,3 @@
-// countdown.mjs
-
 class Countdown {
 	constructor() {
 		this.$el = document.querySelector(".countdown");

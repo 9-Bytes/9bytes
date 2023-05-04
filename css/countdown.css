@@ -37,6 +37,7 @@
 	}
 
 	& .figure {
+		z-index: 0;
 		--figure-size: 4rem;
 		height: var(--figure-size);
 		width: var(--figure-size);
@@ -147,11 +148,11 @@
 	}
 
 	.countdown .figure {
-		--figure-size: 5rem;
+		--figure-size: 5.5rem;
 	}
 }
 
-@media screen and (min-width: 80rem) {
+@media screen and (min-width: 70rem) {
 	#countdown {
 		margin: 5rem 0 0;
 	}

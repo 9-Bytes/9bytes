@@ -15,6 +15,7 @@
 }
 
 .modal {
+	z-index: 10;
 	position: fixed;
 	left: -100vw;
 	opacity: 0;
