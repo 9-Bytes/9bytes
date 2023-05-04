@@ -1,0 +1,28 @@
+<div id="countdown">
+	<h3>FRÜHLINGSRABATT <strong>20%</strong> bis zum 01. Juni 2023</h3>
+
+	<div class="countdown">
+		<div class="bloc-time days">
+			<span class="count-title">Tage</span>
+      {{> countdownCard label="days"}}
+		</div>
+
+		<div class="bloc-time hours" data-init-value="24">
+			<span class="count-title">Stunden</span>
+
+      {{> countdownCard label="hours"}}
+		</div>
+
+		<div class="bloc-time min" data-init-value="0">
+			<span class="count-title">Minuten</span>
+
+      {{> countdownCard label="min"}}
+		</div>
+
+		<div class="bloc-time sec" data-init-value="0">
+			<span class="count-title">Sekunden</span>
+
+      {{> countdownCard label="sec"}}
+		</div>
+	</div>
+</div>
