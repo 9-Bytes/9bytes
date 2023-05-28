@@ -14,7 +14,7 @@ class Countdown {
 		};
 
 		const now = new Date();
-		const until = new Date("2023-05-31T00:00:00");
+		const until = new Date("2023-06-30T00:00:00");
 		const difference = until - now; // Difference in milliseconds
 
 		this.values = {
