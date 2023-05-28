@@ -22,7 +22,7 @@
 .countdown {
 	display: flex;
 	justify-content: center;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	gap: 1.5rem;
 
 	& .bloc-time {
@@ -44,7 +44,7 @@
 
 	& .figure {
 		z-index: 0;
-		--figure-size: 4rem;
+		--figure-size: 2rem;
 		height: var(--figure-size);
 		width: var(--figure-size);
 		position: relative;
@@ -58,7 +58,7 @@
 			left: 0;
 			right: 0;
 			margin: auto;
-			font: normal 5.94em / var(--figure-size) Quicksand;
+			font: normal 3.64em / var(--figure-size) Quicksand;
 			font-weight: 700;
 			color: var(--color);
 		}
@@ -155,6 +155,10 @@
 
 	.countdown .figure {
 		--figure-size: 5.5rem;
+
+		& > span {
+			font: normal 6.94em / var(--figure-size) Quicksand;
+		}
 	}
 }
 

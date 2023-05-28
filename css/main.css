@@ -40,6 +40,7 @@ main {
 				display: flex;
 				flex-direction: column;
 				justify-content: flex-start;
+				text-align: center;
 
 				& h1 {
 					font-size: 4em;
@@ -55,6 +56,10 @@ main {
 					font-size: 2.4em;
 					margin-bottom: 1rem;
 					text-align: left;
+				}
+
+				& .cta {
+					margin-top: 4rem;
 				}
 			}
 		}
@@ -131,6 +136,10 @@ main {
 				background-position: unset;
 				background-image: url(/images/background.avif),
 					linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+
+				& .container .cta {
+					margin-top: 8rem;
+				}
 			}
 		}
 
